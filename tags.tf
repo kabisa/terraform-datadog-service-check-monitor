@@ -6,7 +6,6 @@ locals {
       "terraform:true",
       "env:${var.env}",
       "service:${var.service}",
-      "severity:${var.severity}",
     ],
     var.additional_tags
   )
