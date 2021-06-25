@@ -21,6 +21,7 @@ resource "datadog_monitor" "monitor" {
 
     note = var.note
     docs = var.docs
+    custom_message = var.custom_message
 
     notification_channel = local.notification_channel
   })
