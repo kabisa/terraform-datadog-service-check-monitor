@@ -83,11 +83,6 @@ variable "env" {
   type = string
 }
 
-variable "severity" {
-  type    = string
-  default = "major"
-}
-
 variable "additional_tags" {
   type    = list(string)
   default = []
