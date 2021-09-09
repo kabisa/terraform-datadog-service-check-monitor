@@ -13,15 +13,11 @@ variable "notification_channel" {
   default = ""
 }
 
-variable "name" {
-  type = string
-}
-
 variable "service" {
   type = string
 }
 
-variable "check_name" {
+variable "name" {
   description = <<-DOC
     Name of the check monitored. If this check is not ok for a number of times,
     as defined by the threshold, an alert is raised.
