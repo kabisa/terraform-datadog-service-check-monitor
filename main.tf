@@ -42,11 +42,3 @@ resource "datadog_monitor" "monitor" {
   }
 
   locked = var.locked
-
-  # We don't want to manage muted alerts in Terraform.
-  lifecycle {
-    ignore_changes = [
-      silenced
-    ]
-  }
-}
