@@ -42,3 +42,5 @@ resource "datadog_monitor" "monitor" {
   }
 
   locked = var.locked
+
+}
