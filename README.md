@@ -15,7 +15,7 @@ Pre-commit:
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~> 3.4.0 |
+| <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~> 3.4 |
 
 ## Providers
 
