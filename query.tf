@@ -20,5 +20,5 @@ locals {
     ".count_by_status()"
   ])
 
-  query = "\"${var.check_name}\"${join("", local.modifiers)}"
+  query = "\"${var.metric_name}\"${join("", local.modifiers)}"
 }
