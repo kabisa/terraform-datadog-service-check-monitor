@@ -17,7 +17,7 @@ locals {
     local.modifier_exclude,
     local.modifier_by,
     local.modifier_last,
-    var.track_as_cluster_level_status ? "pct_by_status()" : ".count_by_status()"
+    var.track_as_cluster_level_status ? ".pct_by_status()" : ".count_by_status()"
   ])
 
   query = "\"${var.check_name}\"${join("", local.modifiers)}"
