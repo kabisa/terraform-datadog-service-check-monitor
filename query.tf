@@ -8,8 +8,9 @@ locals {
   by_tags     = join(",", [for tag in var.by_tags : "\"${tag}\""])
   modifier_by = length(local.by_tags) > 0 ? ".by(${local.by_tags})" : ""
 
-  thresholds    = [var.ok_threshold, var.warning_threshold, var.critical_threshold]
-  check_count   = max(compact(local.thresholds)...) + 1
+  thresholds = [var.ok_threshold, var.warning_threshold, var.critical_threshold]
+  # when tracking as cluster datadog defaults to check_count == 1
+  check_count   = var.track_as_cluster_level_status ? 1 : max(compact(local.thresholds)...) + 1
   modifier_last = ".last(${local.check_count})"
 
   modifiers = compact([
