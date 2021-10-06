@@ -154,7 +154,7 @@ variable "custom_message" {
 }
 
 variable "track_as_cluster_level_status" {
-  description = "This allows to check for the status of a cluster in stead of individual hosts, warning and critical thresholds are then expressed as percentages"
+  description = "This allows to check for the status of a cluster instead of individual hosts, warning and critical thresholds are then expressed as percentages"
   type        = bool
   default     = false
 }
