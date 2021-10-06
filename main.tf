@@ -19,8 +19,8 @@ resource "datadog_monitor" "monitor" {
     alert_message    = var.alert_message
     recovery_message = var.recovery_message
 
-    note = var.note
-    docs = var.docs
+    note           = var.note
+    docs           = var.docs
     custom_message = var.custom_message
 
     notification_channel = local.notification_channel
