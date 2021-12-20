@@ -1,5 +1,6 @@
 locals {
   notification_channel = var.alerting_enabled ? var.notification_channel : ""
+  service_display_name = var.service_display_name != null ? var.service_display_name : var.service
 }
 
 resource "datadog_monitor" "monitor" {
@@ -7,7 +8,7 @@ resource "datadog_monitor" "monitor" {
 
   name = join(" - ", compact([
     var.name_prefix,
-    var.service,
+    local.service_display_name,
     var.name,
     var.name_suffix
   ]))
@@ -42,11 +43,4 @@ resource "datadog_monitor" "monitor" {
   }
 
   locked = var.locked
-
-  # We don't want to manage muted alerts in Terraform.
-  lifecycle {
-    ignore_changes = [
-      silenced
-    ]
-  }
 }

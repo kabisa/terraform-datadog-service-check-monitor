@@ -21,5 +21,5 @@ locals {
     var.track_as_cluster_level_status ? ".pct_by_status()" : ".count_by_status()"
   ])
 
-  query = "\"${var.check_name}\"${join("", local.modifiers)}"
+  query = "\"${var.metric_name}\"${join("", local.modifiers)}"
 }
