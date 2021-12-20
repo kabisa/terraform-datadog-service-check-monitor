@@ -26,6 +26,11 @@ variable "service" {
   type        = string
 }
 
+variable "service_display_name" {
+  type    = string
+  default = null
+}
+
 variable "metric_name" {
   description = "Name of the status metric being monitored. If this check is not ok for a number of times, as defined by the threshold, an alert is raised."
   type        = string
