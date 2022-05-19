@@ -54,6 +54,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Name that the monitor should get. Will be automatically prefixed with the Service name. Also name\_suffix and name\_prefix have an effect on the eventual name. It's best set this property to a value that best describes the concern you're trying to cover with the monitor. Eg. Connection Available | `string` | n/a | yes |
 | <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Can be used to prefix to the Monitor name | `string` | `""` | no |
 | <a name="input_name_suffix"></a> [name\_suffix](#input\_name\_suffix) | Can be used to suffix to the Monitor name | `string` | `""` | no |
+| <a name="input_no_data_message"></a> [no\_data\_message](#input\_no\_data\_message) | Message to be sent when the monitor is no longer receiving data | `string` | `""` | no |
 | <a name="input_no_data_timeframe"></a> [no\_data\_timeframe](#input\_no\_data\_timeframe) | n/a | `number` | `null` | no |
 | <a name="input_note"></a> [note](#input\_note) | Field in the alert message that can be used to bring something to the attention of the engineer handling the alert | `string` | `""` | no |
 | <a name="input_notification_channel"></a> [notification\_channel](#input\_notification\_channel) | Channel to which datadog sends alerts, will be overridden by alerting\_enabled if that's set to false | `string` | `""` | no |
@@ -64,6 +65,7 @@ No modules.
 | <a name="input_require_full_window"></a> [require\_full\_window](#input\_require\_full\_window) | n/a | `bool` | `true` | no |
 | <a name="input_service"></a> [service](#input\_service) | Service name of what you're monitoring. This also sets the service:<service> tag on the monitor | `string` | n/a | yes |
 | <a name="input_service_display_name"></a> [service\_display\_name](#input\_service\_display\_name) | n/a | `string` | `null` | no |
+| <a name="input_track_as_cluster_level_status"></a> [track\_as\_cluster\_level\_status](#input\_track\_as\_cluster\_level\_status) | This allows to check for the status of a cluster instead of individual hosts, warning and critical thresholds are then expressed as percentages | `bool` | `false` | no |
 | <a name="input_warning_threshold"></a> [warning\_threshold](#input\_warning\_threshold) | n/a | `number` | `null` | no |
 
 ## Outputs

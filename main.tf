@@ -19,6 +19,7 @@ resource "datadog_monitor" "monitor" {
   message = templatefile("${path.module}/alert.tpl", {
     alert_message    = var.alert_message
     recovery_message = var.recovery_message
+    no_data_message  = var.no_data_message
 
     note           = var.note
     docs           = var.docs
