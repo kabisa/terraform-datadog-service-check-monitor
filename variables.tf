@@ -165,3 +165,9 @@ variable "track_as_cluster_level_status" {
   type        = bool
   default     = false
 }
+
+variable "new_group_delay" {
+  description = "Time (in seconds) to skip evaluations for new groups. https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/monitor"
+  type        = number
+  default     = null
+}
