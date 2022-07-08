@@ -15,13 +15,13 @@ Pre-commit:
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~> 3.4 |
+| <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~> 3.12 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_datadog"></a> [datadog](#provider\_datadog) | 3.4.0 |
+| <a name="provider_datadog"></a> [datadog](#provider\_datadog) | 3.12.0 |
 
 ## Modules
 
@@ -54,6 +54,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Name that the monitor should get. Will be automatically prefixed with the Service name. Also name\_suffix and name\_prefix have an effect on the eventual name. It's best set this property to a value that best describes the concern you're trying to cover with the monitor. Eg. Connection Available | `string` | n/a | yes |
 | <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Can be used to prefix to the Monitor name | `string` | `""` | no |
 | <a name="input_name_suffix"></a> [name\_suffix](#input\_name\_suffix) | Can be used to suffix to the Monitor name | `string` | `""` | no |
+| <a name="input_new_group_delay"></a> [new\_group\_delay](#input\_new\_group\_delay) | Time (in seconds) to skip evaluations for new groups. https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/monitor | `number` | `null` | no |
 | <a name="input_no_data_message"></a> [no\_data\_message](#input\_no\_data\_message) | Message to be sent when the monitor is no longer receiving data | `string` | `""` | no |
 | <a name="input_no_data_timeframe"></a> [no\_data\_timeframe](#input\_no\_data\_timeframe) | n/a | `number` | `null` | no |
 | <a name="input_note"></a> [note](#input\_note) | Field in the alert message that can be used to bring something to the attention of the engineer handling the alert | `string` | `""` | no |

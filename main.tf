@@ -36,6 +36,7 @@ resource "datadog_monitor" "monitor" {
   timeout_h         = var.auto_resolve_time_h
 
   require_full_window = var.require_full_window
+  new_group_delay     = var.new_group_delay
 
   monitor_thresholds {
     critical = var.critical_threshold
